@@ -1,14 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300&display=swap');
+
 body {
-  font-family: sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   background-color: #f0f0f0;
-  text-align: center;
-  padding: 50px;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+
+.hero-image.fade-out {
+  opacity: 0;
+}
+
+/* Mobile-first styles - larger for mobile */
+.hero-text {
+  position: absolute;
+  left: 24px;
+  bottom: 24px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.45);
+  padding: 16px 20px;
+  border-radius: 12px;
+  max-width: calc(100% - 48px);
+  font-family: 'Noto Serif JP', serif;
+  font-weight: 300;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.hero-text strong {
+  display: block;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+  font-weight: 300;
+  letter-spacing: -0.01em;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav {
+  padding: 10px;
+}
+
+/* Desktop and up - smaller for larger screens */
+@media (min-width: 1024px) {
+  .hero-text {
+    left: 16px;
+    bottom: 16px;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    max-width: calc(100% - 32px);
+  }
+
+  .hero-text strong {
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+
+  nav {
+    padding: 8px;
+  }
+}
+
+.img_normal {
+  max-width: min(100%, 800px);
+  height: auto;
 }
 
 h1 {
   color: #333;
+  text-align: center;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+}
+
+h2 {
+  color: #333;
+  font-family: 'Noto Sans JP', sans-serif;
+  font-weight: 500;
+  border-left: 4px solid #751c75;
+  padding-left: 10px;
+}
+
+h3 {
+  color: #333;
+  font-family: 'Noto Sans JP medium', sans-serif;
+  font-weight: 500;
+  margin: 0;
 }
 
 p {
-  color: #666;
+  color: #252525;
+  font-family: 'Noto Sans JP medium', sans-serif;
+  margin: 10px 0;
 }
+
+nav {
+  position: sticky;
+  top: 0;
+  /*width: 100%;*/
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background-color: #751c75;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+nav .active {
+  font-weight: bold;
+}
+
+footer {
+  background-color: #751c75;
+  color: #ffffff;
+  text-align: left;
+  padding: 16px 10px;
+  margin: 0;
+}
+
+footer .footer-content {
+  max-width: 960px;
+  margin: 0;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  display: inline-block;
+}
+
+footer a:hover {
+  color: #e0e0e0;
+  text-decoration: none;
+}
+
+footer .footer-logo {
+  height: 150px;
+  width: auto;
+  display: block;
+}
+
+footer .copyright {
+  font-family: 'Noto Sans JP light', sans-serif;
+  margin: 6px 0 0;
+  color: #f0f0f0;
+  font-size: 0.9rem;
+}
+
+hr {
+  margin: 30px 0;
+  border: none;
+  border-top: 2px solid #751c75;
+}
+
+.favorite-list {
+  margin: 0 0 20px 1.2rem;
+  padding: 0;
+}
+
+.favorite-list li {
+  margin: 6px 0;
+}
+
+.favorite-list li::marker {
+  font-size: 0.5em;
+}
+
+/* =========================
+   グリッドレイアウト
+========================= */
+
+.container {
+  display: grid;
+  gap: 20px;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  max-width: 6000px;
+  /*margin: 10px auto 10px 0;中央ぞろえ用*/
+  margin: 10px auto;
+  padding: 10px;
+}
+
+.container--Avatar {
+  display: grid;
+  gap: 20px;
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 300px));
+
+  margin: 10px auto;
+  justify-content: center;
+}
+/* カード */
+
+.box {
+  margin-right: 0px;
+  background: #2b2929;
+}
+
+.grid_item {
+  box-shadow: 5px 5px 5px rgba(117, 28, 117, 0.25);
+  min-width: 0;
+}
+
+.grid_item--Avatar {
+  max-width: 300px;
+}
+
+/* =========================
+   カード全体リンク
+========================= */
+
+.card-link {
+  display: block;
+
+  text-decoration: none;
+  color: inherit;
+
+  transition: 0.3s;
+}
+
+.card-link:visited {
+  color: inherit;
+}
+
+.card-link:hover {
+  text-decoration: none;
+  color: inherit;
+
+  transform: translateY(-5px);
+}
+
+.card-link:active {
+  color: inherit;
+}
+
+.card-link:focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* hover影 */
+
+.card-link:hover .grid_item {
+  box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* =========================
+   画像
+========================= */
+
+.img {
+  width: auto;
+  height: 200px;
+  overflow: hidden;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.img--Avatar {
+  aspect-ratio: 1 / 1;
+  height: auto;
+  max-width: 300px;
+}
+
+/* =========================
+   テキスト
+========================= */
+
+.text {
+  min-width: 0;
+  padding: 10px;
+}
+
+.text--Avatar {
+  max-width: 300px;
+}
+
