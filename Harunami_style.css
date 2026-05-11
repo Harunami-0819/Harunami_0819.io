@@ -197,6 +197,12 @@ footer .footer-logo {
   display: block;
 }
 
+footer .footer-copy {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
 footer .copyright {
   font-family: 'Noto Sans JP light', sans-serif;
   margin: 6px 0 0;
@@ -332,6 +338,14 @@ hr {
 
 .text {
   min-width: 0;
+  padding: 10px;
+}
+
+.text--Avatar {
+  max-width: 300px;
+}
+
+
   padding: 10px;
 }
 
