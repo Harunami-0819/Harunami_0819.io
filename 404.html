@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Harunami_0819 トップ</title>
+  <link rel="stylesheet" href="Harunami_style.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="index.html">Top</a></li>
+      <li><a href="vrchat.html">VRChat</a></li>
+      <li><a href="achievements.html">Achievement</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="hero hero-404">
+    <img src="VRChat_2026-04-05_20-53-42.996_3840x2160.jpg" alt="Harunami_0819" class="hero-image">
+    <div class="hero-text">
+      <strong>お探しのページが見つかりません</strong>
+      <span id="random-message">もしページがなくなったとしても、思い出は残りますからご安心ください。</span>
+    </div>
+  </section>
+
+
+  <footer>
+    <div class="footer-content">
+      <a href="copy.html" class="footer-copy-link">
+        <img class="footer-copy" src="copy.png" alt="copy">
+      </a><br>
+      <a href="index.html" class="footer-logo-link">
+        <img class="footer-logo" src="white logo.svg" alt="Harunami_0819 Logo">
+      </a>
+      <p class="copyright">© 2026 Harunami_0819</p>
+    </div>
+  </footer>
+
+  <script>
+    const messages = [
+      "もしページがなくなったとしても、思い出は残りますからご安心ください。",
+      "いったんVRChatのソーシャル欄を確認しませんか？",
+      "波のようにまたページが寄せてくるかもしれません。",
+      "春満開の花々のように、またそのページは見られるでしょう。",
+      "もう今日は寝よう。"
+    ];
+    const randomIndex = Math.floor(Math.random() * messages.length);
+    document.getElementById("random-message").textContent = messages[randomIndex];
+  </script>
+</body>
+</html>
