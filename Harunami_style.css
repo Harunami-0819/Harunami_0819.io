@@ -216,7 +216,7 @@ footer .footer-logo {
 }
 
 footer .footer-copy {
-  height: 50px;
+  height: 25px;
   width: auto;
   display: block;
 }
@@ -363,3 +363,8 @@ hr {
   max-width: 300px;
 }
 
+.copypage {
+  height: 50px;
+  max-width: 100%;
+  object-fit: contain;
+}
