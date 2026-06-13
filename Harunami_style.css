@@ -368,3 +368,9 @@ hr {
   max-width: 100%;
   object-fit: contain;
 }
+
+.mail-icon {
+  height: 50px;
+  width: auto;
+  display: block;
+}
