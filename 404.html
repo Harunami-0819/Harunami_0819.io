@@ -11,13 +11,22 @@
   <link rel="stylesheet" href="Harunami_style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html">Top</a></li>
-      <li><a href="vrchat.html">VRChat</a></li>
-      <li><a href="achievements.html">Achievement</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
+  <nav class="site-nav">
+    <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+    <label for="nav-toggle" class="nav-toggle" aria-label="メニューを表示">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-overlay">
+      <label for="nav-toggle" class="nav-close" aria-label="メニューを閉じる">×</label>
+      <ul>
+        <li><a href="index.html">Top</a></li>
+        <li><a href="vrchat.html">VRChat</a></li>
+        <li><a href="achievements.html">Achievement</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
   </nav>
   <section class="hero hero-404">
     <img src="VRChat_2026-04-05_20-53-42.996_3840x2160.jpg" alt="Harunami_0819" class="hero-image">
