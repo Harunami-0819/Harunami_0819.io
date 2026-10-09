@@ -7,7 +7,7 @@
   <link rel="icon" type="image/png" sizes="512x512" href="images/icon-512.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - ページが見つかりません</title>
+  <title>contact</title>
   <link rel="stylesheet" href="Harunami_style.css">
 </head>
 <body>
@@ -25,19 +25,18 @@
         <li><a href="profile.html">Profile</a></li>
         <li><a href="vrchat.html">VRChat</a></li>
         <li><a href="achievements.html">Achievement</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
     </div>
   </nav>
-  <section class="hero hero-404">
-    <img src="images/VRChat_2026-04-05_20-53-42.996_3840x2160.jpg" alt="Harunami_0819" class="hero-image">
-    <div class="hero-text">
-      <strong>お探しのページが見つかりません</strong>
-      <span id="random-message">もしページがなくなったとしても、思い出は残りますからご安心ください。</span>
-    </div>
-  </section>
-
-
+  <h1>contact</h1>
+  <main>
+  <p>ここでは各種連絡先を掲載しております。美州春波屋やHARUボードに関するお問い合わせもこちらで受け付けます。</p>
+    <p>mailでの連絡が確実ですが、TwitterのDMやBoothのメッセージからでも受け付けております。</p>
+    <h2>mail</h2>
+    <img src="images/mail.jpg" alt="mail" class="mail-icon">
+    <p>クローラー対策のために画像ファイルにしてあります。ご不便をかけますがご容赦ください。</p>
+  </main>
   <footer>
     <div class="footer-content">
       <a href="copy.html" class="footer-copy-link">
@@ -49,17 +48,5 @@
       <p class="copyright">© 2026 Harunami_0819</p>
     </div>
   </footer>
-
-  <script>
-    const messages = [
-      "もしページがなくなったとしても、思い出は残りますからご安心ください。",
-      "いったんVRChatのソーシャル欄を確認しませんか？",
-      "波のようにまたページが寄せてくるかもしれません。",
-      "春満開の花々のように、またそのページは見られるでしょう。",
-      "もう今日は寝よう。"
-    ];
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    document.getElementById("random-message").textContent = messages[randomIndex];
-  </script>
 </body>
 </html>
